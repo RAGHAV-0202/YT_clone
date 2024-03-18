@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+navbar {
+    background-color: #0F0F0F;
+    width: 100vw;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: fixed;
+    top: 0;
+
+}
+
+.one {
+    min-width: 70px;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.options,
+.icon {
+    background: none;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+}
+
+.options {
+    width: 40px;
+    height: 40px;
+}
+
+.options i {
+    font-size: 20px;
+}
+
+.options :hover {
+    background-color: hsl(0, 0%, 18.82%);
+}
+
+.icon {
+    width: 120px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.icon i {
+    font-size: 24px;
+}
+
+.icon p {
+    padding-left: 2px;
+    color: white;
+}
+
+
+.two {
+    min-width: 200px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+}
+
+.two input {
+    width: 72%;
+    min-width: 200px;
+    background: none;
+    height: 40px;
+    border: 1px solid hsl(0, 0%, 18.82%);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 14px;
+    border-right: 0;
+    color: white;
+    font-size: 16px;
+}
+
+.two input:focus {
+    outline: none;
+}
+
+.two .search-btn {
+    width: 64px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 40px;
+    margin: 0;
+    background: none;
+    background-color: hsl(0, 0%, 18.82%);
+    border: 0 hsl(0, 0%, 18.82%);
+}
+
+.mic {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: hsl(0, 0%, 18.82%);
+    border: 0;
+    margin-left: 25px;
+}
+
+.three {
+    min-width: 160px;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+}
+
+.three-btns {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    min-width: 130px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.upload,
+.notifications,
+.profile {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 2px;
+    margin-right: 2px;
+    background: none;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.upload:hover,
+.notifications:hover {
+    background-color: hsl(0, 0%, 18.82%);
+}
+
+.profile {
+    overflow: hidden;
+    height: 30px;
+    width: 30px;
+}
+
+.profile img {
+    height: 100%;
+}

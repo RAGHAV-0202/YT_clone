@@ -16,6 +16,7 @@ categories{
     align-items: center;
     flex-direction: row;
     padding-left: 32px;
+    background-color: #0F0F0F;
 }
 .category-btn{
     height: 32px;

@@ -172,6 +172,10 @@ navbar {
 }
 
 @media screen and (max-width : 460px) {
+    navbar{
+        padding-right: 15px;
+
+    }
     .one{
         width: 60%;
         /* background-color: orange; */
@@ -185,7 +189,11 @@ navbar {
 
     }
     .three{
-        width: 10%;
+        width: 5%;
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         /* background-color: green; */
     }
     .one .options{
@@ -197,7 +205,7 @@ navbar {
     .two .search-btn{
         width: 40px;
         height: 40px;
-        /* border-radius: 50%; */
+        border-radius: 50%;
 
     }
     .three .profile{
@@ -211,7 +219,8 @@ navbar {
     }
 
     .search-btn {
-        width: 150px;
-        min-width: 150px;
+        width: 40px;
+        min-width: 40px;
+        background-color: transparent;
     }
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon"
+        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AYouTube_full-color_icon_%25282017%2529.svg&psig=AOvVaw0k-LarwkVsDxJWjXc445Kt&ust=1711032935508000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJicwcuMg4UDFQAAAAAdAAAAABAR"
+        type="image/x-icon">
+
+</head>
+
+<body>
+    <navbar>
+        <div class="one">
+            <button class="options"><i class="fa-light fa-bars" style="color: #ffffff;"></i></button>
+            <a href="index.html" style="text-decoration: none; color: white;" class="icon"><i
+                    class="fa-brands fa-youtube" style="color: #FF0000;"></i>
+                <p>YouTube</p>
+            </a>
+        </div>
+        <div class="two">
+            <input type="text" placeholder="Search">
+
+<a href="search.html" onclick="searchMech(event)" style="text-decoration: none; display: flex ; align-items: center; justify-content: center;"
+    class="search-btn"><i class="fa-light fa-magnifying-glass" style="color: #ffffff;"></i></a>
+
+            <button class="mic"><i class="fa-solid fa-microphone" style="color: #ffffff;"></i></button>
+        </div>
+        <div class="three">
+            <div class="three-btns">
+                <button class="upload"><i class="fa-light fa-video" style="color: #ffffff;"></i></button>
+                <button class="notifications"><i class="fa-regular fa-bell" style="color: #ffffff;"></i></button>
+                <button class="profile"><img
+                        src="https://yt3.ggpht.com/iQP-VZn2VvDN9PwySypXjOxPzsk65W4ZMqNbhdc2EH2Lv_ww3KyheR9uDeiBelBpxCj1Mdi1OPQ=s88-c-k-c0x00ffffff-no-rj"
+                        alt="profile-pic"></button>
+            </div>
+        </div>
+    </navbar>
+    <div class="left-bar">
+        <button class="left-btns home"><i class="fa-solid fa-house" style="color: #ffffff;"></i>
+            <p>Home</p>
+        </button>
+        <button class="left-btns youtube"><i class="fa-brands fa-superpowers" style="color: #ffffff;"></i>
+            <p>Shorts</p>
+        </button>
+        <button class="left-btns subscriptions"><span class="material-symbols-outlined">subscriptions</span>
+            <p>Subscriptions</p>
+        </button>
+        <button class="left-btns you"><span class="material-symbols-outlined">video_library</span>
+            <p>You</p>
+        </button>
+    </div class="left-bar">
+
+    <categories class="scrollable">
+        <button onclick="fetch_data(0)" class="category-btn">All</button>
+        <button onclick="fetch_data(10)" class="category-btn">Music</button>
+        <button onclick="fetch_data(20)" class="category-btn">Gaming</button>
+        <button onclick="fetch_data(25)" class="category-btn">News</button>
+        <button onclick="fetch_data(23)" class="category-btn">Comedy</button>
+        <button onclick="fetch_data(28)" class="category-btn">Technology</button>
+        <button onclick="fetch_data(1)" class="category-btn">Film & Animation</button>
+        <button onclick="fetch_data(2)" class="category-btn">Autos & Vehicles</button>
+        <button onclick="fetch_data(15)" class="category-btn">Pets & Animals</button>
+        <button onclick="fetch_data(17)" class="category-btn">Sports</button>
+        <button onclick="fetch_data(22)" class="category-btn">People & Blogs</button>
+        <button onclick="fetch_data(24)" class="category-btn">Entertainment</button>
+    </categories>
+
+
+    <div class="content">
+        <div class="videos-box"></div>
+    </div>
+
+    <script src="searchMech.js"></script>
+    <script src="search.js"></script>
+</body>
+
+</html>

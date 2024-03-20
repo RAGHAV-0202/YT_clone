@@ -173,19 +173,20 @@ navbar {
 
 @media screen and (max-width : 460px) {
     .one{
-        width: 40%;
-        background-color: orange;
+        width: 60%;
+        /* background-color: orange; */
+        padding-right: 50%;
     }
     .two{
-        width: 10%;
-        background-color: white;
+        width: 20%;
+        /* background-color: white; */
         padding-right: 0;
         min-width: 60px;
 
     }
     .three{
-        width: 40%;
-        background-color: green;
+        width: 10%;
+        /* background-color: green; */
     }
     .one .options{
         display: none;
@@ -197,9 +198,10 @@ navbar {
         width: 40px;
         height: 40px;
         /* border-radius: 50%; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+    }
+    .three .profile{
+        display: none;
     }
     navbar .two {
         padding: 0 0 0 20px;

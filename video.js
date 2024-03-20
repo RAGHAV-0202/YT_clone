@@ -1,8 +1,14 @@
+  // const api_key = "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE"
+  const api_key = "AIzaSyDGOf781Eu4ZBcHNqh-IDrKF7QoCSdlMlg"
+
+
+
 var tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  const api_key = "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE"
+
+
 
 const title_area = document.querySelector(".title");
 const channel_name_area = document.querySelector(".channel-name");
@@ -244,4 +250,16 @@ function timeSince(dateString) {
     }
 
     return `${Math.floor(seconds)} second${Math.floor(seconds) !== 1 ? 's' : ''} ago`;
+}
+
+document.querySelector(".desc").addEventListener("click" , extendDesc);
+let count = 1 ; 
+function extendDesc(){
+  if(count % 2 == 0){
+    document.querySelector(".desc").style.height = "160px"
+  }else{
+    document.querySelector(".desc").style.height = "min-content"
+  }
+  count ++ ; 
+  
 }

@@ -1,4 +1,5 @@
-const api_key = "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE"
+// const api_key = "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE"
+const api_key = "AIzaSyDGOf781Eu4ZBcHNqh-IDrKF7QoCSdlMlg"
 
 const video_box = document.querySelector(".videos-box");
 
@@ -117,28 +118,26 @@ function videoClicked(e){
 
 
 
-
-
-let scrolling = false;
-let startY;
-
-document.querySelector('.scrollable').addEventListener('mousedown', (e) => {
-    scrolling = true;
-    startY = e.pageY;
-});
-
-document.addEventListener('mousemove', (e) => {
-    if (scrolling) {
-        const categoriesContainer = document.querySelector('.scrollable');
-        const scrollAmount = e.pageY - startY;
-        categoriesContainer.scrollTop += scrollAmount;
-        startY = e.pageY;
+window.onscroll = function() {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        const array = [0,10,20,25,23,28,1,2,15,17,22,24]
+        const randomIndex = Math.floor(Math.random() * array.length)
+        fetch_more_data(array[randomIndex])
     }
-});
+};
 
-document.addEventListener('mouseup', () => {
-    scrolling = false;
-});
+const fetch_more_data = async(cID)=>{
+    console.log(cID)
+    const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=53&regionCode=IN&videoCategoryId=${cID}&key=${api_key}`);
+    data = await response.json()
+    console.log(data)
+    
+    for(i = 0 ; i < data.items.length; i++){
+        createVid(data.items[i])
+
+    }
+}
+
 
 
 

@@ -221,6 +221,6 @@ navbar {
     .search-btn {
         width: 40px;
         min-width: 40px;
-        background-color: transparent;
+        background-color: transparent !important;
     }
 }

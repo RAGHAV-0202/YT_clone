@@ -39,7 +39,7 @@ async function getVideo(videoId) {
         // console.log(channel_id)
         // console.log(like_counts)
         if(like_counts > 10000){
-          like_counts = Math.floor(like_counts / 10000) + "K"
+          like_counts = Math.floor(like_counts / 1000) + "K"
         }else if (like_counts > 1000000){
           like_counts = Math.floor(like_counts / 1000000) + "M"
         }
@@ -82,7 +82,8 @@ function onYouTubeIframeAPIReady() {
         'autoplay': 1, // Autoplay the video
         'controls': 1, // Hide player controls
         'modestbranding': 0, // Hide YouTube logo
-        'rel': 0 // Prevent related videos from showing up after the video ends
+        'rel': 0 ,// Prevent related videos from showing up after the video ends
+        "showinfo" : 0 , 
       },
       events: {
         'onReady': onPlayerReady,
@@ -92,6 +93,7 @@ function onYouTubeIframeAPIReady() {
 
     function onPlayerReady(event) {
       event.target.playVideo();
+      func()
     }
 
     function onPlayerStateChange(event) {
@@ -113,7 +115,10 @@ function onPlayerStateChange(event) {
   }
 }
 
-
+    function func(){
+      const elem  = document.querySelector(".ytp-show-cards-title").
+      elem.remove()
+    }
 
 
 

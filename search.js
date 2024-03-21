@@ -5,7 +5,8 @@ console.log(search)
 
 // let api_key = "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE"
 // let api_key = "AIzaSyDGOf781Eu4ZBcHNqh-IDrKF7QoCSdlMlg"
-let api_key = "AIzaSyCX6rIEsjxisyUKdeStlyNoJsox713Ie6o"
+// let api_key = "AIzaSyCX6rIEsjxisyUKdeStlyNoJsox713Ie6o"
+let api_key = "AIzaSyAOth-ZSPGf2gVeBrhOmf7NdmNnB1YNdxc"
 
 const video_box = document.querySelector(".videos-box");
 
@@ -55,20 +56,19 @@ function createVid(data){
     function formatViews(fetched_stats) {
         viewsformatted = 0;
         if (fetched_stats.items.length > 0) {
-            let views = parseInt(fetched_stats.items[0].statistics.viewCount); // Convert to integer
+            let views = parseInt(fetched_stats.items[0].statistics.viewCount); 
             if (views > 1000000) {
                 viewsformatted = Math.floor(views / 1000000) + "M";
             } else if (views > 1000) {
                 viewsformatted = Math.floor(views / 1000) + "K";
             } else {
-                viewsformatted = views; // No need for formatting
+                viewsformatted = views; 
             }
         } else {
             viewsformatted = 0;
         }
 
         console.log("Formatted views:", viewsformatted);
-        // After formatting, create the video element
         createVideoElement(thumb_url, title, channel_name, id, ago, viewsformatted);
     }
 

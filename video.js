@@ -162,7 +162,7 @@ function info_btn_click(e) {
 
 
 async function getVideos() {
-        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=53&regionCode=US&videoCategoryId=0&key=${api_key}`);
+        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=53&regionCode=IN&videoCategoryId=0&key=${api_key}`);
         const data = await response.json();
   for(var i = 0 ; i < data.items.length ; i++){
     createRVideos(data.items[i])

@@ -12,10 +12,10 @@ const video_box = document.querySelector(".videos-box");
 
 const fetch_data = async(cID)=>{
     video_box.innerHTML = ""
-    console.log(cID)
+    // console.log(cID)
     const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=${api_key}&q=${search}`);
     data = await response.json()
-    console.log(data)
+    // console.log(data)
     
     for(i = 0 ; i < data.items.length; i++){
         createVid(data.items[i])
@@ -45,7 +45,7 @@ function createVid(data){
     fetch(`https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${id}&key=${api_key}`)
         .then(res=> res.json())
         .then(fetched_stats=>{
-            console.log(fetched_stats);
+            // console.log(fetched_stats);
             formatViews(fetched_stats); 
         })
         .catch(error => {
@@ -68,7 +68,7 @@ function createVid(data){
             viewsformatted = 0;
         }
 
-        console.log("Formatted views:", viewsformatted);
+        // console.log("Formatted views:", viewsformatted);
         createVideoElement(thumb_url, title, channel_name, id, ago, viewsformatted);
     }
 

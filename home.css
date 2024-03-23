@@ -320,6 +320,12 @@ a{
         justify-content: center;
         align-items: center;
     }
+    .cards{
+        max-width: none;
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .video{
         width: 100%;
     }

@@ -6,11 +6,12 @@ let api_key = "AIzaSyAOth-ZSPGf2gVeBrhOmf7NdmNnB1YNdxc"
 const video_box = document.querySelector(".videos-box");
 
 const fetch_data = async(cID)=>{
-    video_box.innerHTML = ""
-    console.log(cID)
-    const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=53&regionCode=IN&videoCategoryId=${cID}&key=${api_key}`);
+
+    // console.log(cID)
+    const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=51&regionCode=IN&videoCategoryId=${cID}&key=${api_key}`);
     data = await response.json()
     console.log(data)
+    video_box.innerHTML = ""
     
     for(i = 0 ; i < data.items.length; i++){
         createVid(data.items[i])

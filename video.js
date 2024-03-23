@@ -31,12 +31,12 @@ async function getVideo(videoId) {
         const video = data.items[0]; 
         const views = video.statistics.viewCount
 
-        let viewsformatted ; 
-        if(views > 1000000){
-            viewsformatted = Math.floor(views/1000000) + "M"
-        }else if (views > 1000){
-            viewsformatted = Math.floor(views/1000) + "K"
-        }
+      let viewsformatted ;
+      if(views > 1000000){
+          viewsformatted = (Math.floor(views / 100000) / 10).toFixed(1) + "M";
+      }else if (views > 1000){
+          viewsformatted = (Math.floor(views / 100) / 10).toFixed(1) + "K"
+      }
 
         const title = video.snippet.title
         let like_counts = video.statistics.likeCount

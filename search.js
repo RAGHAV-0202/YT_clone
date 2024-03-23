@@ -50,15 +50,13 @@ function createVid(data){
         });
 
     function formatViews(fetched_stats) {
-        viewsformatted = 0;
+        let viewsformatted = 0;
         if (fetched_stats.items.length > 0) {
             let views = parseInt(fetched_stats.items[0].statistics.viewCount); 
             if(views > 1000000){
                 viewsformatted = (Math.floor(views / 100000) / 10).toFixed(1) + "M";
             }else if (views > 1000){
                 viewsformatted = (Math.floor(views / 100) / 10).toFixed(1) + "K"
-            } {
-                viewsformatted = views; 
             }
         } else {
             viewsformatted = 0;

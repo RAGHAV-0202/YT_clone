@@ -65,6 +65,7 @@ function createVid(data){
     const title = (data.snippet.title)
     const channel_name = (data.snippet.channelTitle); // channel
     let views = (data.statistics.viewCount)//views
+    let viewsformatted ;
     if(views > 1000000){
         viewsformatted = (Math.floor(views / 100000) / 10).toFixed(1) + "M";
     }else if (views > 1000){

@@ -1,7 +1,7 @@
-// let api_key = "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE"
-// let api_key = "AIzaSyDGOf781Eu4ZBcHNqh-IDrKF7QoCSdlMlg"
-// let api_key = "AIzaSyCX6rIEsjxisyUKdeStlyNoJsox713Ie6o"
-let api_key = "AIzaSyAOth-ZSPGf2gVeBrhOmf7NdmNnB1YNdxc"
+let api_keys = ["AIzaSyAOth-ZSPGf2gVeBrhOmf7NdmNnB1YNdxc","AIzaSyCX6rIEsjxisyUKdeStlyNoJsox713Ie6o" , "AIzaSyDGOf781Eu4ZBcHNqh-IDrKF7QoCSdlMlg" , "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE" ]
+const random_number = Math.floor(Math.random() * 5)
+console.log(random_number)
+let api_key = api_keys[random_number]
 
 const video_box = document.querySelector(".videos-box");
 

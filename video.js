@@ -70,6 +70,7 @@ async function getVideo(videoId) {
             desc_area.textContent = description
             channel_name_area.textContent = channel_name 
             document.querySelector(".channel-logo").innerHTML = (`<img src="${channelLogoUrl}">`)
+            document.title = title
         })
         .catch(error => console.error(error));
 

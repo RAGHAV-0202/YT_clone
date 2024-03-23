@@ -64,11 +64,10 @@ function createVid(data){
     const title = (data.snippet.title)
     const channel_name = (data.snippet.channelTitle); // channel
     let views = (data.statistics.viewCount)//views
-    let viewsformatted ; 
     if(views > 1000000){
-        viewsformatted = Math.floor(views/1000000) + "M"
+        viewsformatted = (Math.floor(views / 100000) / 10).toFixed(1) + "M";
     }else if (views > 1000){
-        viewsformatted = Math.floor(views/1000) + "K"
+        viewsformatted = (Math.floor(views / 100) / 10).toFixed(1) + "K"
     }
     const id = data.id
     const ago = (timeSince(data.snippet.publishedAt))

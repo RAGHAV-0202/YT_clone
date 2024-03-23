@@ -2,7 +2,7 @@ const video_box = document.querySelector(".videos-box");
 const search = sessionStorage.getItem("search")
 
 let api_keys = [["AIzaSyAOth-ZSPGf2gVeBrhOmf7NdmNnB1YNdxc" , "rP2"],["AIzaSyCX6rIEsjxisyUKdeStlyNoJsox713Ie6o" , "rP1"],["AIzaSyDGOf781Eu4ZBcHNqh-IDrKF7QoCSdlMlg" , "r16"], ["AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE" , "rK40" ] ]
-const random_number = Math.floor(Math.random() * 5)
+const random_number = Math.floor(Math.random() * 4)
 console.log(api_keys[random_number][1])
 let api_key = api_keys[random_number][0]
 

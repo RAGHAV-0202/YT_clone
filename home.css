@@ -18,7 +18,7 @@ categories{
     flex-direction: row;
     padding-left: 32px;
     background-color: #0F0F0F;
-    z-index: 2;
+    z-index: 2000;
 }
 .category-btn{
     height: 32px;

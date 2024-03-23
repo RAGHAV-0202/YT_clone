@@ -26,6 +26,7 @@
     justify-content: space-evenly;
     max-width: 2500px;
     /* background-color: green; */
+    overflow: hidden;
 }
 
 .video{

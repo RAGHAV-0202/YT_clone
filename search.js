@@ -1,6 +1,6 @@
 
 const search = sessionStorage.getItem("search")
-console.log(search)
+// console.log(search)
 
 
 // let api_key = "AIzaSyC9Jdf7e6g-8_c21p_lucNFKLjfN4HKqTE"
@@ -13,7 +13,7 @@ const video_box = document.querySelector(".videos-box");
 const fetch_data = async(cID)=>{
     video_box.innerHTML = ""
     // console.log(cID)
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=${api_key}&q=${search}`);
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=relevance&key=${api_key}&q=${search}`);
     data = await response.json()
     // console.log(data)
     

@@ -9,7 +9,7 @@ const video_box = document.querySelector(".videos-box");
 const fetch_data = async(cID)=>{
 
     // console.log(cID)
-    const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=51&regionCode=IN&videoCategoryId=${cID}&key=${api_key}`);
+    const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=51&regionCode=US&videoCategoryId=${cID}&key=${api_key}`);
     data = await response.json()
     // console.log(data)
     video_box.innerHTML = ""
